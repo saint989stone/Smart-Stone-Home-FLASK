@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html;charset=utf-8" http-equiv="content-type">
+    <link href="static/jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="static/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+    <title>Smart Stone Home</title>
+</head>
+<body>
+    <div id="stts" class="stts">
+        <div class="sttsTitl">Smart Stone Home Trud</div>
+        <div id="sttsSttsTextTemp" class="sttsText"> 0 °C</div>
+        <div id="sttsSttsTextHmdt" class="sttsText"> 0 %</div>
+    </div>
+
+    <div id="clmt" class="main">
+        <label for="clmt">Climate</label>
+
+        <div id="clmtGnrl" class="lvl1Gnrl">
+            <label for="clmtGnrl">On / Off</label>
+            <div class="swtcBlck">
+                <div class="swtcBoxx">
+                    <label for="swtcGnrlclmtSwtc" class="swtc">
+                        <input type="checkbox" class="checkbox" id="swtcGnrlclmtSwtc">
+                        <span class="rondSwtc"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div id="clmtHall" class="lvl1">
+            <label for="clmtHall">Hall</label>
+
+            <div id="clmtHallCntl" class="lvl2">
+                <div id="clmtHallRegl" class="lvl3">
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="clmtHallSwtcSwtc" class="swtc">
+                                <input type="checkbox" class="checkbox" id="clmtHallSwtcSwtc">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">On / Off</div>
+                    </div>
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="clmtHallTextTemp" class="text"></div>
+                        </div>
+                        <div class="indcText">Temperature</div>
+                    </div>
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="clmtHallTextHmdt" class="text"></div>
+                        </div>
+                        <div class="indcText">Humidity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="clmtKtch" class="lvl1">
+            <label for="clmtKtch">Kitchen</label>
+
+            <div id="clmtKtchCntl" class="lvl2">
+                <div id="clmtKtchRegl" class="lvl3">
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="clmtKtchSwtcSwtc" class="swtc">
+                                <input type="checkbox" class="checkbox" id="clmtKtchSwtcSwtc">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">On / Off</div>
+                    </div>
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="clmtKtchTextTemp" class="text"></div>
+                        </div>
+                        <div class="indcText">Temperature</div>
+                    </div>
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="clmtKtchTextHmdt" class="text"></div>
+                        </div>
+                        <div class="indcText">Humidity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lght" class="main">
+        <label for="lght">Lights</label>
+
+        <div id="lghtGnrl" class="lvl1Gnrl">
+            <label for="lghtGnrl">On / Off</label>
+            <div class="swtcBlck">
+                <div class="swtcBoxx">
+                    <label for="swtcGnrllghtSwtc" class="swtc">
+                        <input type="checkbox" class="checkbox" id="swtcGnrllghtSwtc">
+                        <span class="rondSwtc"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div id="lghtHall" class="lvl1">
+            <label for="lghtHall">Hall</label>
+            <div id="lghtHallCntl" class="lvl2">
+                <div id="lghtHallRegl" class="lvl3">
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtHallSwtcSwtc" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtHallSwtcSwtc" name="lghtHallSwtcSwtc">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">On / Off</div>
+                    </div>
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtHallSwtcLghW" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtHallSwtcLghW" name="lghtHallSwtcLghW">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">Window</div>
+                    </div>
+                    <div id="lghtHallSldrBlckLghW" class="sldrBlck">
+                        <div id="lghtHallSldrLgWR" class="sldrBoxx"></div>
+                        <div id="lghtHallSldrLgWG" class="sldrBoxx"></div>
+                        <div id="lghtHallSldrLgWB" class="sldrBoxx"></div>
+                        <div id="lghtHallSldrLgWW" class="sldrBoxx"></div>
+                    </div>
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtHallSwtcLgTV" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtHallSwtcLgTV">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">TV</div>
+                    </div>
+                    <div id="lghtHallSldrLgTV" class="sldrBlck">
+                        <div id="lghtHallSldrLgTR" class="sldrBoxx"></div>
+                        <div id="lghtHallSldrLgTG" class="sldrBoxx"></div>
+                        <div id="lghtHallSldrLgTB" class="sldrBoxx"></div>
+                    </div>
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtHallSwtcWtfl" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtHallSwtcWtfl">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">Waterfall</div>
+                    </div>
+                    <div id="lghtHallSldrBlckWtfl" class="sldrBlck">
+                        <div id="lghtHallSldrWtfl" class="sldrBoxx"></div>
+                    </div>
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtHallSwtcSond" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtHallSwtcSond">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">Sound</div>
+                    </div>
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtHallSwtcNgSg" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtHallSwtcNgSg" name="lghtHallSwtcNgSg">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">Night Sight</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="lghtKtch" class="lvl1">
+            <label for="lghtKtch">Kitchen</label>
+            <div id="lghtKtchCtrl" class="lvl2">
+                <div id="lghtKtchnRegl" class="lvl3">
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtKtchSwtcSwtc" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtKtchSwtcSwtc" name="lghtKtchSwtcSwtc">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">On / Off</div>
+                    </div>
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtKtchSwtcLghW" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtKtchSwtcLghW" name="lghtKtchSwtcLghW">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">Window</div>
+                    </div>
+                    <div id="lghtKtchSldrBlckLghW" class="sldrBlck">
+                        <div id="lghtKtchSldrLgWR" class="sldrBoxx"></div>
+                        <div id="lghtKtchSldrLgWG" class="sldrBoxx"></div>
+                        <div id="lghtKtchSldrLgWB" class="sldrBoxx"></div>
+                        <div id="lghtKtchSldrLgWW" class="sldrBoxx"></div>
+                    </div>
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtKtchSwtcWtfl" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtKtchSwtcWtfl" name="lghtKtchSwtcWtfl">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">Waterfall</div>
+                    </div>
+                    <div id="lghtKtchSldrBlckWtfl" class="sldrBlck">
+                        <div id="lghtKtchSldrWtfl" class="sldrBoxx"></div>
+                    </div>
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtKtchSwtcSond" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtKtchSwtcSond" name="lghtKtchSwtcSond">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">Sound</div>
+                    </div>
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtKtchSwtcLghT" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtKtchSwtcLghT" name="lghtKtchSwtcLghT">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">Table</div>
+                    </div>
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtKtchSwtcLghF" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtKtchSwtcLghF">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">Floor</div>
+                    </div>
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtKtchSwtcLghC" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtKtchSwtcLghC">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">Ceiling</div>
+                    </div>
+
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="lghtKtchSwtcNgSg" class="swtc">
+                                <input type="checkbox" class="checkbox" id="lghtKtchSwtcNgSg" name="lghtKtchSwtcNgSg">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">Night Sight</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="scrt" class="main">
+        <label for="scrt">Security</label>
+
+        <div id="scrtGnrl" class="lvl1Gnrl">
+            <label for="scrtGnrl">On / Off</label>
+            <div class="swtcBlck">
+                <div class="swtcBoxx">
+                    <label for="swtcGnrlscrtSwtc" class="swtc">
+                        <input type="checkbox" class="checkbox" id="swtcGnrlscrtSwtc">
+                        <span class="rondSwtc"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div id="scrtHall" class="lvl1">
+            <label for="scrtHall">Hall</label>
+            <div id="scrtHallCntl" class="lvl2">
+                <div id="scrtHallRegl" class="lvl3">
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="scrtHallSwtcSwtc" class="swtc">
+                                <input type="checkbox" class="checkbox" id="scrtHallSwtcSwtc">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">On / Off</div>
+                    </div>
+
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="scrtHallIndcBalc" class="indc"></div>
+                        </div>
+                        <div class="indcText">Balcony</div>
+                    </div>
+
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="scrtHallIndcRoom" class="indc"></div>
+                        </div>
+                        <div class="indcText">Room</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="scrtKtch" class="lvl1">
+            <label for="scrtKtch">Kitchen</label>
+            <div id="scrtKtchCntl" class="lvl2">
+                <div id="scrtKtchRegl" class="lvl3">
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="scrtKtchSwtcSwtc" class="swtc">
+                                <input type="checkbox" class="checkbox" id="scrtKtchSwtcSwtc">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">On / Off</div>
+                    </div>
+
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="scrtKtchIndcWndw" class="indc"></div>
+                        </div>
+                        <div class="indcText">Window</div>
+                    </div>
+
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="scrtKtchIndcEntc" class="indc"></div>
+                        </div>
+                        <div class="indcText">Entrance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fire" class="main">
+        <label for="fire">Fire</label>
+
+        <div id="fireGnrl" class="lvl1Gnrl">
+            <label for="fireGnrl">On / Off</label>
+            <div class="swtcBlck">
+                <div class="swtcBoxx">
+                    <label for="swtcGnrlfireSwtc" class="swtc">
+                        <input type="checkbox" class="checkbox" id="swtcGnrlfireSwtc">
+                        <span class="rondSwtc"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div id="fireHall" class="lvl1">
+            <label for="fireHall">Hall</label>
+            <div id="fireHallCntl" class="lvl2">
+                <div id="fireHallRegl" class="lvl3">
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="fireHallSwtcSwtc" class="swtc">
+                                <input type="checkbox" class="checkbox" id="fireHallSwtcSwtc">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">On / Off</div>
+                    </div>
+
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="fireHallIndcRoom" class="indc"></div>
+                        </div>
+                        <div class="indcText">Room</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fireKtch" class="lvl1">
+            <label for="fireKtch">Kitchen</label>
+            <div id="fireKtchCntl" class="lvl2">
+                <div id="fireKtchRegl" class="lvl3">
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="fireKtchSwtcSwtc" class="swtc">
+                                <input type="checkbox" class="checkbox" id="fireKtchSwtcSwtc">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">On / Off</div>
+                    </div>
+
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="fireKtchIndcRoom" class="indc"></div>
+                        </div>
+                        <div class="indcText">Room</div>
+                    </div>
+
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="fireKtchIndcCkng" class="indc"></div>
+                        </div>
+                        <div class="indcText">Cooking</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="watr" class="main">
+        <label for="fire">Water</label>
+
+        <div id="watrGnrl" class="lvl1Gnrl">
+            <label for="watrGnrl">On / Off</label>
+            <div class="swtcBlck">
+                <div class="swtcBoxx">
+                    <label for="swtcGnrlwatrSwtc" class="swtc">
+                        <input type="checkbox" class="checkbox" id="swtcGnrlwatrSwtc">
+                        <span class="rondSwtc"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div id="watrKtch" class="lvl1">
+            <label for="watrKtch">Kitchen</label>
+            <div id="watrKtchCntl" class="lvl2">
+                <div id="watrKtchRegl" class="lvl3">
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="watrKtchSwtcSwtc" class="swtc">
+                                <input type="checkbox" class="checkbox" id="watrKtchSwtcSwtc">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">On / Off</div>
+                    </div>
+
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="watrKtchIndc1111" class="indc"></div>
+                        </div>
+                        <div class="indcText">1111</div>
+                    </div>
+
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="watrKtchIndc2222" class="indc"></div>
+                        </div>
+                        <div class="indcText">2222</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="admr" class="main">
+        <label for="admr">Administer</label>
+
+        <div id="admrGnrl" class="lvl1Gnrl">
+            <label for="admrGnrl">On / Off</label>
+            <div class="swtcBlck">
+                <div class="swtcBoxx">
+                    <label for="swtcGnrladmrSwtc" class="swtc">
+                        <input type="checkbox" class="checkbox" id="swtcGnrladmrSwtc">
+                        <span class="rondSwtc"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div id="admrHall" class="lvl1">
+            <label for="admrHall">Hall</label>
+            <div id="admrHallCntl" class="lvl2">
+                <div id="admrHallRegl" class="lvl3">
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="admrHallSwtcSwtc" class="swtc">
+                                <input type="checkbox" class="checkbox" id="admrHallSwtcSwtc">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">On / Off</div>
+                    </div>
+
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="admrHallIndcHall" class="indc"></div>
+                        </div>
+                        <div class="indcText">Hall</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="admrKtch" class="lvl1">
+            <label for="admrKtch">Kitchen</label>
+            <div id="admrKtchCntl" class="lvl2">
+                <div id="admrKtchRegl" class="lvl3">
+                    <div class="swtcBlck">
+                        <div class="swtcBoxx">
+                            <label for="admrKtchSwtcSwtc" class="swtc">
+                                <input type="checkbox" class="checkbox" id="admrKtchSwtcSwtc">
+                                <span class="rondSwtc"></span>
+                            </label>
+                        </div>
+                        <div class="swtcText">On / Off</div>
+                    </div>
+
+                    <div class="indcBlck">
+                        <div class="indcBoxx">
+                            <div id="admrKtchIndcKtch" class="indc"></div>
+                        </div>
+                        <div class="indcText">Kitchen</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="static/jquery-3.4.1.min.js"></script>
+    <script src="static/jquery-ui.min.js"></script>
+    <script src="static/main.js"></script>
+    <script src="static/json.js"></script>
+    <script src="static/ajax.js"></script>
+    <script src="static/hand.js"></script>
+</body>
+</html>

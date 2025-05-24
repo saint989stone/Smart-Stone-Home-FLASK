@@ -1,0 +1,1 @@
+{"clmtHallSwtcSwtc":0,"clmtHallTextTemp":-2147483648,"clmtHallTextHmdt":-2147483648,"scrtHallSwtcSwtc":0,"scrtHallAlrmBuzz":0,"scrtHallIndcBalc":0,"scrtHallIndcRoom":0,"fireHallSwtcSwtc":0,"fireHallAlrmBuzz":0,"fireHallIndcRoom":0}
